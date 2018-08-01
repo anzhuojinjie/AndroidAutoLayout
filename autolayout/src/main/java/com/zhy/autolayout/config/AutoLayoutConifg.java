@@ -81,7 +81,16 @@ public class AutoLayoutConifg
 
         int[] screenSize = ScreenUtils.getScreenSize(context, useDeviceSize);
         mScreenWidth = screenSize[0];
-        mScreenHeight = screenSize[1];
+
+        int width = screenSize[0];
+        int height = screenSize[1];
+        float scale = height/width;
+        float ruleScale = 1920/1080f;
+        if (scale > ruleScale){//此时走的是长屏方案
+            mScreenHeight = ((int) (mScreenWidth * ruleScale));
+        }else {//原始方案
+            mScreenHeight = screenSize[1];
+        }
         L.e(" screenWidth =" + mScreenWidth + " ,screenHeight = " + mScreenHeight);
     }
 
