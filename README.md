@@ -1,7 +1,8 @@
 # AndroidAutoLayout
-[DEPRECATED]Android屏幕适配方案，直接填写设计图上的像素尺寸即可完成适配。
+Android屏幕适配方案，直接填写设计图上的像素尺寸即可完成适配。
 
->目前没有精力，已停止维护，使用前务必看明白代码，明确该方案可以解决自身问题，有扩展代码能力，否则不建议使用。
+>扩展鸿洋大神的AutoLayout，使其支持全面屏（长屏幕），以前的项目只需要修改引入方式即可
+>参考 https://blog.csdn.net/wcsandlili/article/details/79649407
 
 非常感谢 ： 吃土豆的人 的协作。
 
@@ -59,7 +60,7 @@ dependencies {
 
 ```
 dependencies {
-    compile 'com.zhy:autolayout:1.4.5'
+    implementation 'com.github.anzhuojinjie:AndroidAutoLayout:1.0.0'
 }
 ```
 
